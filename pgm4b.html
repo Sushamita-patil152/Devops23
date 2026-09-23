@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <title>Mask Mobile Number</title> 
+</head> 
+<body> 
+    <h2>Mask Mobile Number(10 Digits only)</h2> 
+    <input type="text" id="mobile" placeholder="Enter 10-digit mobile number"> 
+    <br><br> 
+    <button onclick="maskNumber()">Mask Button</button> 
+    <p id="result"></p> 
+ 
+    <script> 
+        function maskNumber() { 
+            let num=document.getElementById("mobile").value; 
+            num=num.replace(/\D/g, ""); 
+            if (num.length !==10) 
+        { 
+            document.getElementById("result").innerHTML="Pleasse enter a valid 10-digit mobile number."; 
+            return; 
+        } 
+        let lastFour=num.slice(-4); 
+        let maskedPart="*".repeat(6); 
+        document.getElementById("result").innerHTML="Masked Number:" + maskedPart+lastFour; 
+        } 
+    </script> 
+</body> 
+</html>

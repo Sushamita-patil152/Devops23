@@ -1,0 +1,53 @@
+<!--Modify exercise 1 by adding four buttons labled northwest,northeast,southwest,southeast. 
+when a button is clicked,the image should move to corresponding corner of the text area.initally the image should pay-->
+<DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                position: relative;
+                width: 300px;
+                height: 250px;
+                margin: auto;
+                border: 1px solid black;
+            }
+
+            img{
+                position: relative;
+                top:0;
+                left:0;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function moveImage(pos){
+                var img = document.getElementById("myImage");
+                if(pos=="nw"){
+                    img.style.top="0px";
+                    img.style.left="0px";
+                }
+                if(pos=="ne"){
+                    img.style.top="0px";
+                    img.style.left="200px";
+                }
+                if(pos=="sw"){
+                    img.style.top="182px";
+                    img.style.left="0px";
+                }
+                if(pos=="se"){
+                    img.style.top="182px";
+                    img.style.left="200px";
+                }
+            }
+        </script>
+    </body>
+    <button onclick="moveImage('nw')">Northwest</button>
+    <button onclick="moveImage('ne')">Northeast</button>
+    <button onclick="moveImage('sw')">Southwest</button>
+    <button onclick="moveImage('se')">Southeast</button>
+    <div class="container">
+        <img src="graduation.png" id="myImage">
+    </div>
+</html>

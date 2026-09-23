@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Click to bring to Top</title>
+		<style>
+			#stackContainer{
+				position:relative;
+				width:400px;
+				height:400px;
+				border:1px solid #ccc;
+				overflow:hidden;
+			}
+			.layer{
+				position: absolute;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>Click image or text to bring to top </h3>
+		<div id = "stackContainer"></div>
+		<script>
+			const container = document.getElementById('stackContainer');
+			let topZ = 3;
+			function addLayer(ele,z,top,left,width,height)
+			{
+				ele.className = 'layer';
+				ele.style.zIndex = z;
+				ele.style.top = top;
+				ele.style.left = left;
+				if(width) ele.style.width = width;
+				if(width) ele.style.width = height;
+				ele.onclick = () => ele.style.zIndex = ++topZ;
+				container.appendChild(ele);
+			}
+			const bg = document.createElement('img');
+			bg.src = 'speak_icon.jpg';
+			addLayer(bg, 1, '50px', '50px', '100px', '100px');
+			
+			const overlay = document.createElement('img');
+			overlay.src = 'sunflower.jpg';
+			addLayer(overlay, 2, '100px', '100px', '100%', '100%');
+
+			const text = document.createElement('div');
+			text.textContent = 'Stacked Text on Top';
+			text.style.color = 'blue';
+			text.style.fontSize = '20px';
+			text.style.fontWeight = 'bold';
+			text.style.textShadow = '1px 1px 3px black';
+			addLayer(text, 3, '200px', '20px');
+		</script>
+	</body>
+</html>
