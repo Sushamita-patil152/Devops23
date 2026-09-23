@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Application Form</title>
+<style> 
+
+
+.form-container{
+            width: 850px;
+            margin: 50px auto;
+            background-color: #0b5d6b;
+            padding: 25px;
+            border-radius: 25px;
+            color: white;
+        }
+h1{
+            text-align: center;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+ </style>   
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <h1>Application Form</h1>
+
+        <form>
+
+            <table>
+
+                <tr>
+                    <td>
+                        First Name:
+                        <input type="text" name="fname">
+                    </td>
+
+                    <td>
+                        Last Name:
+                        <input type="text" name="lname">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Date of Birth:
+                        <input type="date" name="dob">
+                    </td>
+
+                    <td>
+                        Age:
+                        <input type="number" name="age">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Gender:
+                        <select name="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+
+                    <td>
+                        Email Address:
+                        <input type="email" name="email" placeholder="Enter email address">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Positions Available:
+
+                        <input type="radio" name="position">
+                        Junior Developer
+
+                        <input type="radio" name="position">
+                        Mid-level Developer
+
+                        <input type="radio" name="position">
+                        Senior Developer
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Programming Languages:
+
+                        <input type="checkbox" name="java">
+                        Java
+
+                        <input type="checkbox" name="js">
+                        JavaScript
+
+                        <input type="checkbox" name="python">
+                        Python
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Password:
+                        <input type="password" name="password">
+                    </td>
+
+                    <td>
+                        Confirm Password:
+                        <input type="password" name="cpassword">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
